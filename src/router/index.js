@@ -1,27 +1,43 @@
-//  const NotFound = {template : '<p>Page Not Found</p>'}
-// const about = {template:'<p>this is an about us page</p>'}
-
-
-// const routes =  {
-//     '/': Home,
-//     '/about':about
-// }
- 
-
-
- import Vue from 'vue'
- import Router from 'vue-router';
- import LandingPage from '../components/LandingPage';
-
-
-
-Vue.use(Router);
-
-
-export default new Router({
-    routes:{
-        path:'/',
-        component:LandingPage
-    }
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import AboutView from '../views/AboutView.vue'
+import LandingPage from '../views/LandingPage.vue'
+  
+Vue.use(VueRouter)
+  
+const routes = [
+    {
+        path: '/',
+        name: 'home',
+        component: LandingPage
+    },
+    //  Added our new route file named profile.vue
+    {
+        path: '/about',
+        name: 'about',
+        Component: AboutView
+  
+    },
+    {
+        path: '/about',
+        name: 'about',
+        // The route level code-splitting
+        // this generates a separate chunk 
+        // (about.[hash].js) for this route
+        // which is lazy-loaded when the
+        // route is visited.
+        component:()=> import(
+            /* webpackChunkName: "about" */ 
+            '../views/AboutView.vue'
+        )
+    },
+]
+  
+// Create Vue Router Object
+const router = new VueRouter({
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes
 })
- 
+  
+export default router
