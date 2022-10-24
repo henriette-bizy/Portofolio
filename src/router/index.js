@@ -34,10 +34,9 @@ const routes = [
 ]
   
 // Create Vue Router Object
-const router = new VueRouter({
+export const router = new VueRouter({
     mode: 'history',
-    base: process.env.BASE_URL,
+    base: 'http://localhost:8080/',
     routes
 })
   
-export default router
