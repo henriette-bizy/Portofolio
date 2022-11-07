@@ -1,10 +1,21 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <p>hdhdh</p>
-    </div>  
-    <!-- <router-view/> -->
+  <div class="">
+    <NavBarComponent />
+    
   </div>
+
+
 </template>
 
+<script>
 
+import NavBarComponent from './components/NavBarComponent.vue';
+
+
+export default {
+  name:'App',
+  components:{
+    NavBarComponent 
+  },
+}
+</script>

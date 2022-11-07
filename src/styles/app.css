@@ -1,0 +1,12 @@
+/* ./src/styles/app.css */
+@import url('https://fonts.googleapis.com/icon?family=Poppins');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+*{
+    background-color: black;
+    font-family: Poppins;
+}
