@@ -1,5 +1,5 @@
 /* ./src/styles/app.css */
-@import url('https://fonts.googleapis.com/icon?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
