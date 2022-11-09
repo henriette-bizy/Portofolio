@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <NavBarComponent />
+    <LandingPage />
     
   </div>
 
@@ -9,13 +9,13 @@
 
 <script>
 
-import NavBarComponent from './components/NavBarComponent.vue';
+import LandingPage from './views/LandingPage.vue';
 
 
 export default {
   name:'App',
   components:{
-    NavBarComponent 
+    LandingPage ,
   },
 }
 </script>
